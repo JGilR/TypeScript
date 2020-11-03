@@ -1,6 +1,6 @@
 # TypeScript
 
-## Practica 1 TS
+# Practica 1 TS
 Realizar en Typescript tres funciones:
 * deepPrint
 * deepClone
@@ -14,7 +14,7 @@ La función *deepEqual* debe recibir dos objetos y debe comprobar si son idénti
 
 La práctica debe incluir varios ejemplos que demuestren el funcionamiento.
 
-## Practica 2
+# Practica 2
 Se pide realizar una API REST utilizando `Deno` y el servidor `oak`. La práctica debe trabajar con una base de datos Mongo alojada en Mongo Atlas.
 
 ## Endpoints
