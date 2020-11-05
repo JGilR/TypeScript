@@ -31,6 +31,14 @@ const putCars = async (ctx: IContext) => {
             
         ])
 
+        //* Para insertar desde el postman
+        /**
+         * const {value} = ctx.resquest.body({type: `json`});
+         * const car: Partial<CarSchema>[] = await value;
+         * const insert = await CarCollection.insertMany(car);
+         */
+
+        
         const data: CarSchema[] = await carCollection.find({});
         const result = data.map(async (item) => {
             return {

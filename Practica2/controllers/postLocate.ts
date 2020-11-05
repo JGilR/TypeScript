@@ -3,7 +3,7 @@ import {  helpers } from "https://deno.land/x/oak@v6.3.1/mod.ts";
 import type { Database } from "https://deno.land/x/mongo@v0.13.0/ts/database.ts";
 import type { CarSchema, IClient, ICar, ClientSchema } from "../types.ts";
 
-const postLocate = async(ctx: IContext) => {
+const postLocate = async (ctx: IContext) => {
     try{
 
         const db: Database = ctx.state.db;
@@ -15,8 +15,13 @@ const postLocate = async(ctx: IContext) => {
 
         if(client){
             const findLocation = await carCollection.findOne({client: client.id});
-            ctx.response.status = 200;
-            ctx.response.body = {exception: "OK", id: findLocation?.id};
+            if(findLocation){
+                ctx.response.status = 200;
+                ctx.response.body = {exception: "OK", id: findLocation?.id};
+            }else{
+                ctx.response.status = 404;
+                ctx.response.body = "Client Not Found";
+            }
         }else{
             ctx.response.status = 404;
             ctx.response.body = "Client Not Found";

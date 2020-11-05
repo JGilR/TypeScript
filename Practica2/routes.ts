@@ -8,7 +8,11 @@ const router = new Router();
 const index = (ctx:any) => {
     ctx.response.body = 
     "Welcome to my CAR API\nYou are ready to use this API:\n\n" + 
-    "/status: to get the API status.\n";
+    "/status: get the API status.\n" +
+    "/cars: introduce some cars and reset our DB.\n" +
+    "/journey: one client rent a car.\n" +
+    "/locate/:id: return the rented car and his data.\n" ;
+    
 }
 
 const status = (ctx:any) => {
@@ -26,7 +30,7 @@ router
     .get("/status", status)
     .put("/cars", putCars)
     .post("/journey", postJorney)
-    .post("/location/:id", postLocation)
+    .post("/locate/:id", postLocation)
 
 
 
