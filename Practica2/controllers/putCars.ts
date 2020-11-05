@@ -40,7 +40,7 @@ const putCars = async (ctx: IContext) => {
 
         
         const data: CarSchema[] = await carCollection.find({});
-        const result = data.map(async (item) => {
+        const result = data.map((item) => {
             return {
                 id: item.id,
                 seats: item.seats,
