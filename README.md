@@ -227,34 +227,6 @@ La agenda almacenará Tasks, con los siguientes datos:
 * State: TODO / DOING / DONE
 
 Se pide desarrollar una API GraphQL en Deno que tenga las siguientes queries/mutations:
-
-    addTask -> permite añadir una nueva tarea
-    removeTask -> elimina una tarea (por ID)
-    updateTask -> actualiza una tarea (por ID)
-    completeTask -> marca una tarea como realizada (por ID)
-    startTask -> marca una tarea como DOING (por ID)
-    getTask -> devuelve una tarea por ID
-    getTasks -> devuelve un array con todas las tareas
-    getTaskByState -> devuelve todas las tareas con un etado determinado.
-    getTaskByDate -> devuelve todas las tareas que se deben concluir antes de la fecha pasada por parámetro
-
-Las tareas se deben almacenar en una base de datos Mongo.
-
-Subir el proyecto a un repositorio github o gitlab y compartir el enlace de la release correspondiente a la entrega.
-
-    addTask -> permite añadir una nueva tarea
-    removeTask -> elimina una tarea (por ID)
-    updateTask -> actualiza una tarea (por ID)
-    completeTask -> marca una tarea como realizada (por ID)
-    startTask -> marca una tarea como DOING (por ID)
-    getTask -> devuelve una tarea por ID
-    getTasks -> devuelve un array con todas las tareas
-    getTaskByState -> devuelve todas las tareas con un etado determinado.
-    getTaskByDate -> devuelve todas las tareas que se deben concluir antes de la fecha pasada por parámetro
-
-Las tareas se deben almacenar en una base de datos Mongo.
-
-Subir el proyecto a un repositorio github o gitlab y compartir el enlace de la release correspondiente a la entrega.
 * addTask -> permite añadir una nueva tarea.
 * removeTask -> elimina una tarea (por ID).
 * updateTask -> actualiza una tarea (por ID).
