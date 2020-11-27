@@ -215,3 +215,61 @@ Devuelve los datos del coche en el que un grupo con ID está viajando.
 * **404 Not Found** Dicho grupo no está registrado en un viaje.
 * **500 Server Error** Si hay un error inesperado (no controlado) de cualquier tipo
 
+
+# Practica 3
+Se desea desarrollar una API para gestionar una agenda de tareas (calendario)
+
+La agenda almacenará Tasks, con los siguientes datos:
+* ID
+* Nombre
+* Descripción
+* Fecha en la que debe concluirse
+* State: TODO / DOING / DONE
+
+Se pide desarrollar una API GraphQL en Deno que tenga las siguientes queries/mutations:
+
+    addTask -> permite añadir una nueva tarea
+    removeTask -> elimina una tarea (por ID)
+    updateTask -> actualiza una tarea (por ID)
+    completeTask -> marca una tarea como realizada (por ID)
+    startTask -> marca una tarea como DOING (por ID)
+    getTask -> devuelve una tarea por ID
+    getTasks -> devuelve un array con todas las tareas
+    getTaskByState -> devuelve todas las tareas con un etado determinado.
+    getTaskByDate -> devuelve todas las tareas que se deben concluir antes de la fecha pasada por parámetro
+
+Las tareas se deben almacenar en una base de datos Mongo.
+
+Subir el proyecto a un repositorio github o gitlab y compartir el enlace de la release correspondiente a la entrega.
+
+    addTask -> permite añadir una nueva tarea
+    removeTask -> elimina una tarea (por ID)
+    updateTask -> actualiza una tarea (por ID)
+    completeTask -> marca una tarea como realizada (por ID)
+    startTask -> marca una tarea como DOING (por ID)
+    getTask -> devuelve una tarea por ID
+    getTasks -> devuelve un array con todas las tareas
+    getTaskByState -> devuelve todas las tareas con un etado determinado.
+    getTaskByDate -> devuelve todas las tareas que se deben concluir antes de la fecha pasada por parámetro
+
+Las tareas se deben almacenar en una base de datos Mongo.
+
+Subir el proyecto a un repositorio github o gitlab y compartir el enlace de la release correspondiente a la entrega.
+* addTask -> permite añadir una nueva tarea.
+* removeTask -> elimina una tarea (por ID).
+* updateTask -> actualiza una tarea (por ID).
+* completeTask -> marca una tarea como realizada (por ID).
+* startTask -> marca una tarea como DOING (por ID).
+* getTask -> devuelve una tarea por ID.
+* getTasks -> devuelve un array con todas las tareas.
+* getTaskByState -> devuelve todas las tareas con un etado determinado.
+* getTaskByDate -> devuelve todas las tareas que se deben concluir antes de la fecha pasada por parámetro.
+
+Las tareas se deben almacenar en una base de datos Mongo.
+
+## EXECUTE DENO
+To execute the server with deno `deno run --allow-all --unstable app.ts`
+
+Listen Port: `http://localhost:4000/graphql`
+
+
