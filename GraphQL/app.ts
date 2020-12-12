@@ -40,7 +40,7 @@ type Mutation {
 
 const resolvers = {
   Query: {
-    getUser: (parent: any, args: any, context: {users:IUser[]}, info: any) => {
+    getUser: (parent: any, args: {id:string}, context: {users:IUser[]}, info: any) => {
       const users = context.users;
       const user: IUser | undefined = users.find(usr => usr.id === args.id);
       return user;
@@ -63,6 +63,26 @@ const resolvers = {
     },
   },
 };
+
+app.use(async (ctx, next) => {
+  console.log(ctx.request.headers.get("token"));
+  const value = await ctx.request.body().value;
+  console.log(value);
+  const validQuery = ["login", "signin"];
+
+  if(validQuery.some( elem => value.query.includes("login")) ){
+    await next();
+  }else{
+    if(ctx.request.headers.get("token") == "12345" || true){
+      await next();
+    }else{
+      ctx.response.status = 401;
+      ctx.response.body = { error: "Auth error" };
+    }
+  }
+  
+  
+})
 
 const GraphQLService = await applyGraphQL<Router>({
   Router,
