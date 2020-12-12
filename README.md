@@ -239,6 +239,51 @@ Se pide desarrollar una API GraphQL en Deno que tenga las siguientes queries/mut
 
 Las tareas se deben almacenar en una base de datos Mongo.
 
+# Practica 4
+Partiendo de la Práctica III
+
+Se desea desarrollar una API para gestionar una agenda de tareas (calendario)
+
+La agenda almacenará Tasks, con los siguientes datos:
+
+* ID
+* Nombre
+* Descripción
+* Fecha en la que debe concluirse
+* State: TODO / DOING / DONE
+* reporter: quien crea la tarea
+* assignee: la persona asignada
+
+Los usuarios tendrán los siguientes datos:
+
+* correo electrónico (que actúa como identificador único)
+* contraseña
+
+Se pide desarrollar una API GraphQL en Deno que tenga las siguientes queries/mutations:
+
+Para gestionar los usuarios:
+
+* signin: permite a un usuario registrarse, indicando su correo y contraseña, si el usuario ya existe devuelve un error.
+* login: permite a un usuario iniciar sesión, si el usuario y la contraseña coinciden, generando un token asociado a dicho usuario con el cual podrá autenticarse.
+* logout: permite a un usuario que ya ha iniciado sesión, finalizar la sesión
+* deleteAccount: borra la cuenta de usuario (necesita estar loggeado para poder hacerlo)
+
+Para gestionar las tareas (todas ellas requieren que el usuario esté loggado según el sitema de autenticación visto en clase. Si se accede sin autenticar devolverá un error 401):
+
+* addTask -> permite añadir una nueva tarea, el reporter será el usuario loggeado, mientras que el assignee se debe especificar.
+* removeTask -> elimina una tarea (por ID). Solo lo puede hacer el reporter (estando loggeado)
+* updateTask -> actualiza una tarea (por ID). Solo lo pueden hacer el reporter o el assignee (estando loggeados)
+* completeTask -> marca una tarea como realizada (por ID). Solo lo puede hacer el assignee (estando loggeado)
+* startTask -> marca una tarea como DOING (por ID). Solo lo puede hacer el assignee (estando loggeado)
+* getTask -> devuelve una tarea por ID. Lo puede hacer cualquier usuario loggeado.
+* getTasks -> devuelve un array con todas las tareas. Lo puede hacer cualquier usuario loggeado.
+* getTaskByState -> devuelve todas las tareas con un etado determinado. Lo puede hacer cualquier usuario loggeado.
+* getMyTasks -> develve todas las tareas en las que el usuario loggeado es el reporter o el assignee.
+* getMyOpenTasks -> develve todas las tareas que no están completadas en las que el usuario loggeado es el reporter o el assignee.
+* getUsers -> devuelve todos los usuarios registrados en la plataforma (en los datos que devuelve graphql sobre del usuario se deben incluir dos arrays: uno con las tareas que tiene asignadas y otro con las tareas de las que es reporter)
+
+Las tareas y los usuarios se deben almacenar en una base de datos Mongo.
+
 ## EXECUTE DENO
 To execute the server with deno `deno run --allow-all --unstable app.ts`
 
