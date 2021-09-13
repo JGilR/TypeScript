@@ -1,5 +1,82 @@
 # TypeScript
 
+# Temario
+## Introducción a la Arquitectura de Sistemas Web
+- Infraestructura general de aplicaciones web
+    - Persistent Storage
+    - Backend
+    - FrontEnd
+- Frameworks/Lenguajes BackEnd
+    - Python/Django
+    - Java
+    - JavaScript/Node.js
+    - JavaScript-TypeScript/Deno.js
+    - PHP
+    - ...
+- FrameWorks/Lenguajes FrontEnd
+    - HTML/CSS/JavaScript
+        - React
+        - Angular
+        - Vue
+        - ...
+
+## TypeScript vs JavaScript
+`https://www.infoworld.com/article/3526447/typescript-vs-javascript-understand-the-differences.html`
+
+## Primeros pasos con JavaScript/TypeScript
+- Fundamentos de JavaScript
+    - Variables, tipos y operadores. `https://eloquentjavascript.net/01_values.html`
+    - Estructuras de un programa. `https://eloquentjavascript.net/02_program_structure.html`
+    - Funciones. `https://eloquentjavascript.net/03_functions.html`
+    - Consideraciones sobre Javascript. `https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md`
+- Tipado basico en Typescript. `https://www.typescriptlang.org/docs/handbook/basic-types.html`
+
+## Ejercicios
+Se recomienda en uso de consolas online para las primeras pruebas:
+
+- Consola Javascript `https://jsconsole.com/`
+- Consola Typescript `https://www.typescriptlang.org/play`
+
+Ejercicios de los tres temas vistos del libro "Eloquent JavaScript". Se deben resolver con TypeScript (tipando) -> Consola TypeScript
+
+## More on functions
+From de book Functional Light JavaScript `https://github.com/getify/Functional-Light-JS`
+
+- Chapter 1: Why Functional Programming?
+- Chapter 2: The Nature Of Functions
+- Chapter 3: Managing Function Inputs
+- Chapter 4: Composing Functions
+- Chapter 5: Reducing Side Effects
+
+## Sesion 3
+Contenidos a trabajar en clase:
+
+- Estructuras de Datos `https://eloquentjavascript.net/04_data.html`
+- Tipado de estructuras de datos `https://www.typescriptlang.org/docs/handbook/interfaces.html`
+
+## Sesion 4
+- Asynchronous JavaScript `https://eloquentjavascript.net/11_async.html`
+- First steps with Deno
+    - Install `https://deno.land/manual@v1.4.4/getting_started/installation`
+    - Hello World `https://deno.land/manual@v1.4.4/examples/hello_world`
+    - Debugging Deno Program `https://deno.land/manual@v1.0.0/tools/debugger`
+    - Read and write files `https://deno.land/manual@v1.4.4/examples/read_write_files`
+    - Fetching data `https://deno.land/manual@v1.4.4/examples/fetch_data` 
+
+Rick and Morty API used in examples `https://rickandmortyapi.com/`
+
+## Sesion 5
+## Deno and Mongo Database
+- MongoDB document model `https://docs.mongodb.com/manual/introduction/`
+- Database and Collections `https://docs.mongodb.com/manual/core/databases-and-collections/`
+- Creating a free Mongo DB `https://www.mongodb.com/es/cloud/atlas`
+- MongoDB and Deno `https://github.com/denodrivers/deno_mongo`
+- MongoDB and Deno - Examples `https://github.com/denodrivers/deno_mongo/blob/main/EXAMPLES.md`
+- MongoDB Query Language `https://docs.mongodb.com/manual/tutorial/query-documents/`
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Practicas
 # Practica I
 Realizar en Typescript tres funciones:
 * deepPrint
